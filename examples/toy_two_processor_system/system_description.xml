@@ -1,0 +1,41 @@
+<system>
+  <!--CPUs-->
+  <module kind="altera_nios2" name="cpu_0" tdma_slots=""/>
+  <module kind="altera_nios2" name="cpu_1" tdma_slots=""/>
+  <!--CPU-specific memories-->
+  <module kind="altera_avalon_onchip_memory2" name="memory_cpu_0" size="32768"/>
+  <module kind="altera_avalon_onchip_memory2" name="memory_cpu_1" size="32768"/>
+  <!--CPU-specific UARTs-->
+  <module kind="altera_avalon_jtag_uart" name="uart_cpu_0"/>
+  <module kind="altera_avalon_jtag_uart" name="uart_cpu_1"/>
+  <!--CPU-specific performance counters-->
+  <module kind="altera_avalon_performance_counter" name="performance_counter_cpu_0"/>
+  <module kind="altera_avalon_performance_counter" name="performance_counter_cpu_1"/>
+  <!--CPU-specific DMA controllers-->
+  <module kind="altera_avalon_dma" name="dma_cpu_0"/>
+  <!--Communication memories-->
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_0_process_1" size="512" tdma_slot_length="5000" cpu_0_data_master_slots="---" dma_cpu_0_write_master_slots="---" cpu_1_data_master_slots="---"/>
+  <!--SRAM-->
+  <module kind="altera_up_avalon_sram" name="sram" size="2097152"/>
+  <!--CPU-specific connections-->
+  <connection data="yes" end="memory_cpu_0" instructions="yes" start="cpu_0"/>
+  <connection data="yes" end="memory_cpu_1" instructions="yes" start="cpu_1"/>
+  <connection data="yes" end="uart_cpu_0" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="uart_cpu_1" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="performance_counter_cpu_0" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="performance_counter_cpu_1" instructions="no" start="cpu_1"/>
+  <!--DMA control connections-->
+  <connection control="yes" data="yes" end="dma_cpu_0" start="cpu_0"/>
+  <!--DMA <-> local memory connections-->
+  <connection data="yes" end="memory_cpu_0" read="yes" start="dma_cpu_0"/>
+  <!--Interrupts-->
+  <interrupt end="uart_cpu_0" number="0" start="cpu_0"/>
+  <interrupt end="uart_cpu_1" number="0" start="cpu_1"/>
+  <interrupt end="dma_cpu_0" number="1" start="cpu_0"/>
+  <!--Connections to shared memories-->
+  <connection data="yes" end="shared_memory_process_0_process_1" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="shared_memory_process_0_process_1" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="shared_memory_process_0_process_1" start="dma_cpu_0" write="yes"/>
+  <!--SRAM connection-->
+  <connection data="yes" end="sram" instructions="no" start="cpu_0"/>
+</system>

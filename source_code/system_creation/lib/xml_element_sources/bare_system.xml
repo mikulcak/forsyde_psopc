@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="automation_test_system">
+	<parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+	<parameter name="device" value="EP4CE115F23C7" />
+	<parameter name="deviceFamily" value="Cyclone IV E" />
+	<parameter name="deviceSpeedGrade" value="Unknown" />
+	<parameter name="fabricMode" value="SOPC" />
+	<parameter name="generateLegacySim" value="true" />
+	<parameter name="generationId" value="0" />
+	<parameter name="globalResetBus" value="true" />
+	<parameter name="hdlLanguage" value="VHDL" />
+	<parameter name="maxAdditionalLatency" value="0" />
+	<parameter name="projectName" value="" />
+	<parameter name="sopcBorderPoints" value="true" />
+	<parameter name="systemHash" value="" />
+	<parameter name="timeStamp" value="" />
+	<parameter name="useTestBenchNamingPattern" value="false" />
+</system>

@@ -1,0 +1,109 @@
+<system>
+  <!--CPUs-->
+  <module kind="altera_nios2" name="cpu_0" tdma_slots=""/>
+  <module kind="altera_nios2" name="cpu_1" tdma_slots=""/>
+  <module kind="altera_nios2" name="cpu_2" tdma_slots=""/>
+  <module kind="altera_nios2" name="cpu_3" tdma_slots=""/>
+  <!--CPU-specific memories-->
+  <module kind="altera_avalon_onchip_memory2" name="memory_cpu_0" size="32768"/>
+  <module kind="altera_avalon_onchip_memory2" name="memory_cpu_1" size="32768"/>
+  <module kind="altera_avalon_onchip_memory2" name="memory_cpu_2" size="32768"/>
+  <module kind="altera_avalon_onchip_memory2" name="memory_cpu_3" size="32768"/>
+  <!--CPU-specific UARTs-->
+  <module kind="altera_avalon_jtag_uart" name="uart_cpu_0"/>
+  <module kind="altera_avalon_jtag_uart" name="uart_cpu_1"/>
+  <module kind="altera_avalon_jtag_uart" name="uart_cpu_2"/>
+  <module kind="altera_avalon_jtag_uart" name="uart_cpu_3"/>
+  <!--CPU-specific performance counters-->
+  <module kind="altera_avalon_performance_counter" name="performance_counter_cpu_0"/>
+  <module kind="altera_avalon_performance_counter" name="performance_counter_cpu_1"/>
+  <module kind="altera_avalon_performance_counter" name="performance_counter_cpu_2"/>
+  <module kind="altera_avalon_performance_counter" name="performance_counter_cpu_3"/>
+  <!--CPU-specific DMA controllers-->
+  <module kind="altera_avalon_dma" name="dma_cpu_0"/>
+  <module kind="altera_avalon_dma" name="dma_cpu_1"/>
+  <module kind="altera_avalon_dma" name="dma_cpu_2"/>
+  <!--Communication memories-->
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_2_process_3" size="512" tdma_slot_length="5000" cpu_0_data_master_slots="---" dma_cpu_0_write_master_slots="---" cpu_1_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_2_process_5" size="512" tdma_slot_length="5000" cpu_0_data_master_slots="---" dma_cpu_0_write_master_slots="---" cpu_1_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_2_process_7" size="512" tdma_slot_length="5000" cpu_0_data_master_slots="---" dma_cpu_0_write_master_slots="---" cpu_1_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_2_process_9" size="512" tdma_slot_length="5000" cpu_0_data_master_slots="---" dma_cpu_0_write_master_slots="---" cpu_2_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_2_process_11" size="512" tdma_slot_length="5000" cpu_0_data_master_slots="---" dma_cpu_0_write_master_slots="---" cpu_2_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_2_process_13" size="512" tdma_slot_length="5000" cpu_0_data_master_slots="---" dma_cpu_0_write_master_slots="---" cpu_2_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_4_process_15" size="128" tdma_slot_length="5000" cpu_1_data_master_slots="---" dma_cpu_1_write_master_slots="---" cpu_3_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_6_process_15" size="128" tdma_slot_length="5000" cpu_1_data_master_slots="---" dma_cpu_1_write_master_slots="---" cpu_3_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_8_process_15" size="128" tdma_slot_length="5000" cpu_1_data_master_slots="---" dma_cpu_1_write_master_slots="---" cpu_3_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_10_process_15" size="128" tdma_slot_length="5000" cpu_2_data_master_slots="---" dma_cpu_2_write_master_slots="---" cpu_3_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_12_process_15" size="128" tdma_slot_length="5000" cpu_2_data_master_slots="---" dma_cpu_2_write_master_slots="---" cpu_3_data_master_slots="---"/>
+  <module kind="altera_avalon_onchip_memory2" name="shared_memory_process_14_process_15" size="128" tdma_slot_length="5000" cpu_2_data_master_slots="---" dma_cpu_2_write_master_slots="---" cpu_3_data_master_slots="---"/>
+  <!--SRAM-->
+  <module kind="altera_up_avalon_sram" name="sram" size="2097152"/>
+  <!--CPU-specific connections-->
+  <connection data="yes" end="memory_cpu_0" instructions="yes" start="cpu_0"/>
+  <connection data="yes" end="memory_cpu_1" instructions="yes" start="cpu_1"/>
+  <connection data="yes" end="memory_cpu_2" instructions="yes" start="cpu_2"/>
+  <connection data="yes" end="memory_cpu_3" instructions="yes" start="cpu_3"/>
+  <connection data="yes" end="uart_cpu_0" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="uart_cpu_1" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="uart_cpu_2" instructions="no" start="cpu_2"/>
+  <connection data="yes" end="uart_cpu_3" instructions="no" start="cpu_3"/>
+  <connection data="yes" end="performance_counter_cpu_0" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="performance_counter_cpu_1" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="performance_counter_cpu_2" instructions="no" start="cpu_2"/>
+  <connection data="yes" end="performance_counter_cpu_3" instructions="no" start="cpu_3"/>
+  <!--DMA control connections-->
+  <connection control="yes" data="yes" end="dma_cpu_0" start="cpu_0"/>
+  <connection control="yes" data="yes" end="dma_cpu_1" start="cpu_1"/>
+  <connection control="yes" data="yes" end="dma_cpu_2" start="cpu_2"/>
+  <!--DMA <-> local memory connections-->
+  <connection data="yes" end="memory_cpu_0" read="yes" start="dma_cpu_0"/>
+  <connection data="yes" end="memory_cpu_1" read="yes" start="dma_cpu_1"/>
+  <connection data="yes" end="memory_cpu_2" read="yes" start="dma_cpu_2"/>
+  <!--Interrupts-->
+  <interrupt end="uart_cpu_0" number="0" start="cpu_0"/>
+  <interrupt end="uart_cpu_1" number="0" start="cpu_1"/>
+  <interrupt end="uart_cpu_2" number="0" start="cpu_2"/>
+  <interrupt end="uart_cpu_3" number="0" start="cpu_3"/>
+  <interrupt end="dma_cpu_0" number="1" start="cpu_0"/>
+  <interrupt end="dma_cpu_1" number="1" start="cpu_1"/>
+  <interrupt end="dma_cpu_2" number="1" start="cpu_2"/>
+  <!--Connections to shared memories-->
+  <connection data="yes" end="shared_memory_process_2_process_3" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="shared_memory_process_2_process_3" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="shared_memory_process_2_process_3" start="dma_cpu_0" write="yes"/>
+  <connection data="yes" end="shared_memory_process_2_process_5" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="shared_memory_process_2_process_5" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="shared_memory_process_2_process_5" start="dma_cpu_0" write="yes"/>
+  <connection data="yes" end="shared_memory_process_2_process_7" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="shared_memory_process_2_process_7" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="shared_memory_process_2_process_7" start="dma_cpu_0" write="yes"/>
+  <connection data="yes" end="shared_memory_process_2_process_9" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="shared_memory_process_2_process_9" instructions="no" start="cpu_2"/>
+  <connection data="yes" end="shared_memory_process_2_process_9" start="dma_cpu_0" write="yes"/>
+  <connection data="yes" end="shared_memory_process_2_process_11" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="shared_memory_process_2_process_11" instructions="no" start="cpu_2"/>
+  <connection data="yes" end="shared_memory_process_2_process_11" start="dma_cpu_0" write="yes"/>
+  <connection data="yes" end="shared_memory_process_2_process_13" instructions="no" start="cpu_0"/>
+  <connection data="yes" end="shared_memory_process_2_process_13" instructions="no" start="cpu_2"/>
+  <connection data="yes" end="shared_memory_process_2_process_13" start="dma_cpu_0" write="yes"/>
+  <connection data="yes" end="shared_memory_process_4_process_15" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="shared_memory_process_4_process_15" instructions="no" start="cpu_3"/>
+  <connection data="yes" end="shared_memory_process_4_process_15" start="dma_cpu_1" write="yes"/>
+  <connection data="yes" end="shared_memory_process_6_process_15" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="shared_memory_process_6_process_15" instructions="no" start="cpu_3"/>
+  <connection data="yes" end="shared_memory_process_6_process_15" start="dma_cpu_1" write="yes"/>
+  <connection data="yes" end="shared_memory_process_8_process_15" instructions="no" start="cpu_1"/>
+  <connection data="yes" end="shared_memory_process_8_process_15" instructions="no" start="cpu_3"/>
+  <connection data="yes" end="shared_memory_process_8_process_15" start="dma_cpu_1" write="yes"/>
+  <connection data="yes" end="shared_memory_process_10_process_15" instructions="no" start="cpu_2"/>
+  <connection data="yes" end="shared_memory_process_10_process_15" instructions="no" start="cpu_3"/>
+  <connection data="yes" end="shared_memory_process_10_process_15" start="dma_cpu_2" write="yes"/>
+  <connection data="yes" end="shared_memory_process_12_process_15" instructions="no" start="cpu_2"/>
+  <connection data="yes" end="shared_memory_process_12_process_15" instructions="no" start="cpu_3"/>
+  <connection data="yes" end="shared_memory_process_12_process_15" start="dma_cpu_2" write="yes"/>
+  <connection data="yes" end="shared_memory_process_14_process_15" instructions="no" start="cpu_2"/>
+  <connection data="yes" end="shared_memory_process_14_process_15" instructions="no" start="cpu_3"/>
+  <connection data="yes" end="shared_memory_process_14_process_15" start="dma_cpu_2" write="yes"/>
+  <!--SRAM connection-->
+  <connection data="yes" end="sram" instructions="no" start="cpu_0"/>
+</system>

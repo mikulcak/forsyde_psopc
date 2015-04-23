@@ -1,0 +1,8 @@
+/*
+	set the initial values for an encoded_block struct:
+		set height and width to TOP_INT
+		set block_id to an integer between -10 and 5000
+		set complete array of 48 integers to 0 (since their value doesn't have any influence on the execution time)
+		set block_position to an integer between 0 and 1536
+*/
+STMT_ENTRY main main::entry 0 ASSIGN input 0 32 1 TOP_INT || input 32 32 1 TOP_INT || input 64 32 1 INT -10 5000 || input 96 32 48 INT 0 || input 1632 32 INT 0 1536;

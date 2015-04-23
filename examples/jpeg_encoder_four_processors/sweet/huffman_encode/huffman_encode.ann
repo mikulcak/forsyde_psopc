@@ -1,0 +1,21 @@
+/* 
+Set all values in a[1] to a[10] to any positive number
+*/
+
+/* ASSIN a 32 32 10 TOP_INT means:
+	start at bit position 32 of structure a (first '32'), which effectively means a[1]
+	now fill until bit position 32*10 (second '32' and '10', multiplication!) with the value TOP_INT, which means any and all integers
+	Annotion 5 in the manual was a good tip how to figure this out...
+
+*/
+STMT_ENTRY main main::entry 0 ASSIGN content_to_be_encoded 0 16 64 TOP_INT;
+
+/*|| a 64 32 TOP_INT
+|| a 96 32 TOP_INT
+|| a 128 32 TOP_INT
+|| a 160 32 TOP_INT
+|| a 192 32 TOP_INT
+|| a 224 32 TOP_INT
+|| a 256 32 TOP_INT
+|| a 288 32 TOP_INT
+|| a 320 32 TOP_INT;*/

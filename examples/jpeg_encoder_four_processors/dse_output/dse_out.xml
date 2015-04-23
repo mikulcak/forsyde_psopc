@@ -1,0 +1,260 @@
+<!-- example of a  possible DSE tool output with three processes mapped to two processors -->
+<!-- processes are the highest hierarchical order -->
+<dse_output>
+	<!-- bitmap_reader -->
+	<process id="1" cpu="0">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>2</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>780</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>4</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+
+	<!-- color_conversion -->
+	<process id="2" cpu="0">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>3</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>5</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>7</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>9</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>11</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>13</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+
+	<!-- dct -->
+	<process id="3" cpu="1">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>4</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- huffman -->
+	<process id="4" cpu="1">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>15</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>48</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- dct -->
+	<process id="5" cpu="1">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>6</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- huffman -->
+	<process id="6" cpu="1">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>15</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>48</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- dct -->
+	<process id="7" cpu="1">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>8</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- huffman -->
+	<process id="8" cpu="1">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>15</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>48</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- dct -->
+	<process id="9" cpu="2">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>10</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- huffman -->
+	<process id="10" cpu="2">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>15</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>48</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- dct -->
+	<process id="11" cpu="2">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>12</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- huffman -->
+	<process id="12" cpu="2">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>15</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>48</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- dct -->
+	<process id="13" cpu="2">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>14</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>144</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- huffman -->
+	<process id="14" cpu="2">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>15</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>48</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- concatenate_steps -->
+	<process id="15" cpu="3">
+		<channel>
+			<!-- channel from process 1 to process 2 -->
+			<to_process>16</to_process>
+			<!-- tokens have a size of 4 bytes -->
+			<token_size>208</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>2</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+	
+	<!-- merge_and_write -->
+	<process id="16" cpu="3">
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+
+</dse_output>

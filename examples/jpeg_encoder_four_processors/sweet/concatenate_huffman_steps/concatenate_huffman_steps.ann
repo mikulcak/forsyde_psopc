@@ -1,0 +1,19 @@
+/* 
+	this one is a bit tricky:
+		1. set the first eight words to TOP_INT
+		2. set the following word to an integer value between 0 and 256 (since it is the bit position of the content which can never exceed 256)
+
+	the declaration of input is also not set at the entry to the main function but in the for loop body in the main function,
+	so every run has different values (this, however, does not change the outcome, is just closer to reality)
+*/
+STMT_ENTRY main main::for.body 0 ASSIGN input 0 32 8 TOP_INT || input 256 32 1 INT 0 256;
+
+/*|| a 64 32 TOP_INT
+|| a 96 32 TOP_INT
+|| a 128 32 TOP_INT
+|| a 160 32 TOP_INT
+|| a 192 32 TOP_INT
+|| a 224 32 TOP_INT
+|| a 256 32 TOP_INT
+|| a 288 32 TOP_INT
+|| a 320 32 TOP_INT;*/

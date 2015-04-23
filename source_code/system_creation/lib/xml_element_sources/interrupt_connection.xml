@@ -1,0 +1,7 @@
+ <connection
+   kind="interrupt"
+   version="12.1"
+   start="cpu_0.d_irq"
+   end="jtag_uart_cpu_0.irq">
+  <parameter name="irqNumber" value="" />
+ </connection>

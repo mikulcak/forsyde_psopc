@@ -1,0 +1,6 @@
+ <module kind="altera_up_avalon_sram" version="12.0" enabled="1" name="sram_0">
+  <parameter name="board" value="DE2-115" />
+  <parameter name="pixel_buffer" value="false" />
+  <parameter name="AUTO_CLOCK_RESET_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+ </module>

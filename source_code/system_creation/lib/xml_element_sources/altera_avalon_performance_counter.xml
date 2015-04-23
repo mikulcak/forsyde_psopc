@@ -1,0 +1,7 @@
+ <module
+   kind="altera_avalon_performance_counter"
+   version="12.1"
+   enabled="1"
+   name="performance_counter_0">
+  <parameter name="numberOfSections" value="3" />
+ </module>

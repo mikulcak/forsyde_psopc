@@ -1,0 +1,4 @@
+ <module kind="altera_avalon_mutex" version="12.1" enabled="1" name="">
+  <parameter name="initialOwner" value="0" />
+  <parameter name="initialValue" value="0" />
+ </module>

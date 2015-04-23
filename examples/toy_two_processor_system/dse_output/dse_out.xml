@@ -1,0 +1,24 @@
+<!-- example of a  possible DSE tool output with three processes mapped to two processors -->
+<!-- processes are the highest hierarchical order -->
+
+<dse_output>
+	<!-- process 0, mapped to CPU 0, one SDF channel to process 1 -->
+	<process id="0" cpu="0">
+		<channel>
+			<!-- channel from process 0 to process 1 -->
+			<to_process>1</to_process>
+			<!-- tokens have a size of 32 bytes -->
+			<token_size>32</token_size>
+			<!-- the buffer size in number of tokens on the receiving side -->
+			<buffer_size>10</buffer_size>
+		</channel>
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+
+	<!-- process 1, mapped to CPU 1, no outgoing channels -->
+	<process id="1" cpu="1">
+		<!-- the memory requirement of the process on the processor -->
+		<local_memory_consumption>32768</local_memory_consumption>		
+	</process>
+</dse_output>

@@ -1,0 +1,20 @@
+ <module kind="altera_avalon_dma" version="12.1" enabled="1" name="">
+  <parameter name="allowByteTransactions" value="false" />
+  <parameter name="allowDoubleWordTransactions" value="false" />
+  <parameter name="allowHalfWordTransactions" value="false" />
+  <parameter name="allowQuadWordTransactions" value="false" />
+  <parameter name="allowWordTransactions" value="true" />
+  <parameter name="avalonSpec" value="1.0" />
+  <parameter name="bigEndian" value="false" />
+  <parameter name="burstEnable" value="false" />
+  <parameter name="fifoDepth" value="32" />
+  <parameter name="maxBurstSize" value="128" />
+  <parameter name="minimumDmaTransactionRegisterWidth" value="13" />
+  <parameter name="readAddressMap"></parameter>
+  <parameter name="readSlaveAddressWidthMax" value="16" />
+  <parameter name="readSlaveDataWidthMax" value="32" />
+  <parameter name="useRegistersForFIFO" value="true" />
+  <parameter name="writeAddressMap"></parameter>
+  <parameter name="writeSlaveAddressWidthMax" value="17" />
+  <parameter name="writeSlaveDataWidthMax" value="32" />
+ </module>

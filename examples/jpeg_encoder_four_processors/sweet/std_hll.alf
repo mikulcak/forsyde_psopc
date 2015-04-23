@@ -1,0 +1,24 @@
+// this file is part of the SWEET WCET tool suite and can be downloaded at:
+// http://www.mrtc.mdh.se/projects/wcet/sweet/DocBook/std_hll.alf
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs 
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+ }
+  { lrefs }
+ }
+ { imports
+  { frefs }
+  { lrefs }
+ }
+ { decls
+  { alloc 64 "$null" 32 }
+  { alloc 64 "$mem" inf }
+ }
+ { inits }
+ { funcs }
+}

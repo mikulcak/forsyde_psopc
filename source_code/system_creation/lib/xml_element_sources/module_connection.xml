@@ -1,0 +1,8 @@
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="cpu_0.instruction_master"
+   end="cpu_0.jtag_debug_module">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00081800" />
+ </connection>
